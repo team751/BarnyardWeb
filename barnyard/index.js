@@ -12,11 +12,13 @@ function checkLogin() {
     const div = document.createElement("div")
 
     console.log("checking login")
- 
+
     auth2.currentUser.listen(function (googleUser) {
         const alertContent = document.getElementById("alert-content")
-        const basicProfile = auth2.currentUser.get().getBasicProfile()
+        //const basicProfile = googleUser.getBasicProfile()
         const logInAlert = document.createElement("div")
+
+        console.log("User is: ", googleUser)
 
         document.body.removeChild(document.getElementById("g-signin-button"))
 
@@ -27,8 +29,8 @@ function checkLogin() {
         logInAlert.className = "row"
         logInAlert.innerHTML = `
         <div class="alert alert-success" role="alert">
-            <img src=` + basicProfile.getImageUrl() + ` alt="User Icon">
-            <h3 class="alert-heading">Hello 👋` + basicProfile.getName() + `</h3>
+            <img src=` + googleUser.getImageUrl() + ` alt="User">
+            <h3 class="alert-heading">Hello 👋` + googleUser.getName() + `</h3>
         </div>
         `
 
