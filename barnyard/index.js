@@ -1,5 +1,5 @@
 function checkLogin() {
-    console.log("loaded")
+    console.log("login loaded")
 
     if(!navigator.cookieEnabled) {
         $('alert-placeholder').html('<div id="cookiealert" class="alert alert-warning">' +
