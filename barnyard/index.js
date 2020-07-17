@@ -5,17 +5,22 @@ function checkLogin() {
         $('alert-placeholder').html('<div id="cookiealert" class="alert alert-warning">' +
                                     '<span>Cookies aren\'t enabled! Please enable them to use '+
                                     'Barnyard-Web</span></div>')
+        return
     }
 
     const auth2 = gapi.auth2.getAuthInstance();
 
+    console.log("checking login")
+
     if(auth2.isSignedIn.get()) {
+        console.log("already logged in")
+
         onSignIn(auth2.currentUser.get())
     } else {
-        $('alert-placeholder').html('<div id="cookiealert" class="alert alert-warning">' +
-                                    '<span>Sign in with google to proceed.</span></div>')
+        console.log("sign in needed")
 
-        $('google-sign-in').html('<div class="g-signin2" data-onsuccess="onSignIn"></div>')
+        $('alert-placeholder').html('<div id="loginalert" class="alert alert-warning">' +
+                                    '<span>Sign in with google to proceed.</span></div>')
     }
 }
 
