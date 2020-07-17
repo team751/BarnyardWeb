@@ -14,27 +14,29 @@ function checkLogin() {
     console.log("checking login")
 
     auth2.currentUser.listen(function (googleUser) {
-        const alertContent = document.getElementById("alert-content")
-        //const basicProfile = googleUser.getBasicProfile()
-        const logInAlert = document.createElement("div")
+        if(googleUser.isSignedIn()) {
+            const alertContent = document.getElementById("alert-content")
+            const basicProfile = googleUser.getBasicProfile()
+            const logInAlert = document.createElement("div")
 
-        console.log("User is: ", googleUser)
+            console.log("User is: ", googleUser)
 
-        document.body.removeChild(document.getElementById("g-signin-button"))
+            document.body.removeChild(document.getElementById("g-signin-button"))
 
-        while(alertContent.firstChild) {
-            alertContent.removeChild(alertContent.firstChild)
+            while(alertContent.firstChild) {
+                alertContent.removeChild(alertContent.firstChild)
+            }
+
+            logInAlert.className = "row"
+            logInAlert.innerHTML = `
+            <div class="alert alert-success" role="alert">
+                <img src=` + googleUser.getImageUrl() + ` alt="User">
+                <h3 class="alert-heading">Hello 👋` + googleUser.getName() + `</h3>
+            </div>
+            `
+
+            alertContent.appendChild(logInAlert)
         }
-
-        logInAlert.className = "row"
-        logInAlert.innerHTML = `
-        <div class="alert alert-success" role="alert">
-            <img src=` + googleUser.getImageUrl() + ` alt="User">
-            <h3 class="alert-heading">Hello 👋` + googleUser.getName() + `</h3>
-        </div>
-        `
-
-        alertContent.appendChild(logInAlert)
     })
 
     div.className = "row"
