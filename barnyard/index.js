@@ -17,10 +17,18 @@ function checkLogin() {
 
         onSignIn(auth2.currentUser.get())
     } else {
+        const div = document.createElement("div")
+
+        div.className = "row"
+        div.innerHTML = `
+        <div id="loginalert" class="alert alert-warning" role="alert">
+            <span>Sign in with google to proceed.</span>
+        </div>
+        `
+
         console.log("sign in needed")
 
-        $('alert-placeholder').html('<div id="loginalert" class="alert alert-warning">' +
-                                    '<span>Sign in with google to proceed.</span></div>')
+        document.body.appendChild(div)
     }
 }
 
