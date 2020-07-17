@@ -28,7 +28,7 @@ function checkLogin() {
 
         console.log("sign in needed")
 
-        document.body.appendChild(div)
+        document.getElementById("alert-content").appendChild(div)
     }
 }
 
