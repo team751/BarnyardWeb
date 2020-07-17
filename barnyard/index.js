@@ -12,10 +12,10 @@ function checkLogin() {
     const div = document.createElement("div")
 
     console.log("checking login")
-
+ 
     auth2.currentUser.listen(function (googleUser) {
         const alertContent = document.getElementById("alert-content")
-        const basicProfile = googleUser.getBasicProfile()
+        const basicProfile = auth2.currentUser.get().getBasicProfile()
         const logInAlert = document.createElement("div")
 
         document.body.removeChild(document.getElementById("g-signin-button"))
