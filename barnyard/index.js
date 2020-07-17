@@ -30,8 +30,8 @@ function checkLogin() {
             logInAlert.className = "row"
             logInAlert.innerHTML = `
             <div class="alert alert-success" role="alert">
-                <img src=` + googleUser.getImageUrl() + ` alt="User">
-                <h3 class="alert-heading">Hello 👋` + googleUser.getName() + `</h3>
+                <img src=` + basicProfile.getImageUrl() + ` alt="User">
+                <h3 class="alert-heading">Hello 👋` + basicProfile.getName() + `</h3>
             </div>
             `
 
