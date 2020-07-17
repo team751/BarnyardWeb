@@ -9,29 +9,40 @@ function checkLogin() {
     }
 
     const auth2 = gapi.auth2.getAuthInstance();
+    const div = document.createElement("div")
 
     console.log("checking login")
 
-    if(auth2.isSignedIn.get()) {
-        console.log("already logged in")
+    auth2.currentUser.listen(function (googleUser) {
+        const alertContent = document.getElementById("alert-content")
+        const basicProfile = googleUser.getBasicProfile()
+        const logInAlert = document.createElement("div")
 
-        onSignIn(auth2.currentUser.get())
-    } else {
-        const div = document.createElement("div")
+        document.body.removeChild(document.getElementById("g-signin-button"))
 
-        div.className = "row"
-        div.innerHTML = `
-        <div id="loginalert" class="alert alert-warning" role="alert">
-            <span>Sign in with google to proceed.</span>
+        while(alertContent.firstChild) {
+            alertContent.removeChild(alertContent.firstChild)
+        }
+
+        logInAlert.className = "row"
+        logInAlert.innerHTML = `
+        <div class="alert alert-success" role="alert">
+            <img src=` + basicProfile.getImageUrl() + ` alt="User Icon">
+            <h3 class="alert-heading">Hello 👋` + basicProfile.getName() + `</h3>
         </div>
         `
 
-        console.log("sign in needed")
+        alertContent.appendChild(logInAlert)
+    })
 
-        document.getElementById("alert-content").appendChild(div)
-    }
-}
+    div.className = "row"
+    div.innerHTML = `
+    <div class="alert alert-warning" role="alert">
+        <span>Sign in with google to proceed.</span>
+    </div>
+    `
 
-function onSignIn(googleUser){
-    //
+    console.log("sign in needed")
+
+    document.getElementById("alert-content").appendChild(div)
 }
