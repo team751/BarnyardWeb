@@ -14,6 +14,8 @@ function checkLogin() {
     console.log("checking login")
 
     auth2.currentUser.listen(function (googleUser) {
+        console.log("hit googleUser auth2")
+
         if(googleUser.isSignedIn()) {
             const alertContent = document.getElementById("alert-content")
             const basicProfile = googleUser.getBasicProfile()
