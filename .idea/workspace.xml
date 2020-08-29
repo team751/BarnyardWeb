@@ -20,7 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93e4f1b5-14ec-4b5f-8c36-807f803dd7d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/AddPartHandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/EditPartHandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/SearchPartHandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/barnyard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/barnyard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/barnyard/index.js" afterDir="false" />
     </list>
@@ -51,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/index.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,10 +67,17 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.Brave">
     <configuration name="Unnamed" type="FirefoxRemoteDebugType" nameIsGenerated="true">
       <method v="2" />
     </configuration>
+    <configuration name="Brave" type="JavascriptDebugType" uri="http://localhost:63342/BarnyardWeb/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Firefox Remote.Unnamed" />
+      <item itemvalue="JavaScript Debug.Brave" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -79,7 +91,7 @@
       <workItem from="1594949172719" duration="43000" />
       <workItem from="1594949242499" duration="1357000" />
       <workItem from="1594950753938" duration="10389000" />
-      <workItem from="1598732797187" duration="144000" />
+      <workItem from="1598732797187" duration="3839000" />
     </task>
     <servers />
   </component>
@@ -103,58 +115,66 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="709" y="220" width="800" height="714" key="#Plugins/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1594949217804" />
-    <state x="422" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595013116114">
+    <state x="751" y="334" width="413" height="445" key="#Web_Browsers" timestamp="1598733758459">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="422" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1595013116114" />
-    <state width="1899" height="346" key="GridCell.Tab.0.bottom" timestamp="1598732839694">
+    <state x="751" y="334" width="413" height="445" key="#Web_Browsers/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598733758459" />
+    <state x="422" y="192" width="1076" height="693" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598733826885">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839694" />
-    <state width="1899" height="346" key="GridCell.Tab.0.center" timestamp="1598732839694">
+    <state x="422" y="192" width="1076" height="693" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598733826885" />
+    <state x="746" y="284" width="424" height="514" key="FileChooserDialogImpl" timestamp="1598733823722">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839694" />
-    <state width="1899" height="346" key="GridCell.Tab.0.left" timestamp="1598732839694">
+    <state x="746" y="284" width="424" height="514" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598733823722" />
+    <state width="1899" height="346" key="GridCell.Tab.0.bottom" timestamp="1598742354182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839694" />
-    <state width="1899" height="346" key="GridCell.Tab.0.right" timestamp="1598732839694">
+    <state width="1899" height="346" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.0.center" timestamp="1598742354182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839694" />
-    <state width="1899" height="346" key="GridCell.Tab.1.bottom" timestamp="1598732839695">
+    <state width="1899" height="346" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.0.left" timestamp="1598742354182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839695" />
-    <state width="1899" height="346" key="GridCell.Tab.1.center" timestamp="1598732839694">
+    <state width="1899" height="346" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.0.right" timestamp="1598742354182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839694" />
-    <state width="1899" height="346" key="GridCell.Tab.1.left" timestamp="1598732839694">
+    <state width="1899" height="346" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.1.bottom" timestamp="1598742354182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839694" />
-    <state width="1899" height="346" key="GridCell.Tab.1.right" timestamp="1598732839695">
+    <state width="1899" height="346" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.1.center" timestamp="1598742354182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839695" />
-    <state width="1899" height="346" key="GridCell.Tab.2.bottom" timestamp="1598732839695">
+    <state width="1899" height="346" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.1.left" timestamp="1598742354182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.2.bottom/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839695" />
-    <state width="1899" height="346" key="GridCell.Tab.2.center" timestamp="1598732839695">
+    <state width="1899" height="346" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.1.right" timestamp="1598742354182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.2.center/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839695" />
-    <state width="1899" height="346" key="GridCell.Tab.2.left" timestamp="1598732839695">
+    <state width="1899" height="346" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.2.bottom" timestamp="1598742354183">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.2.left/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839695" />
-    <state width="1899" height="346" key="GridCell.Tab.2.right" timestamp="1598732839695">
+    <state width="1899" height="346" key="GridCell.Tab.2.bottom/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354183" />
+    <state width="1899" height="346" key="GridCell.Tab.2.center" timestamp="1598742354182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1899" height="346" key="GridCell.Tab.2.right/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598732839695" />
+    <state width="1899" height="346" key="GridCell.Tab.2.center/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.2.left" timestamp="1598742354182">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1899" height="346" key="GridCell.Tab.2.left/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
+    <state width="1899" height="346" key="GridCell.Tab.2.right" timestamp="1598742354182">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1899" height="346" key="GridCell.Tab.2.right/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1598742354182" />
     <state x="467" y="187" width="986" height="732" key="SettingsEditor" timestamp="1595012918279">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -167,16 +187,5 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="774" y="293" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1594949190582" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/barnyard/index.js</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

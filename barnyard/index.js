@@ -20,6 +20,7 @@ function checkLogin() {
             const alertContent = document.getElementById("alert-content")
             const basicProfile = googleUser.getBasicProfile()
             const logInAlert = document.createElement("div")
+            const partArea = document.createElement("div")
 
             console.log("User is: ", googleUser)
 
@@ -35,6 +36,13 @@ function checkLogin() {
                 <img src=` + basicProfile.getImageUrl() + ` alt="User">
                 <h3 class="alert-heading">Hello 👋` + basicProfile.getName() + `</h3>
             </div>
+            `
+
+            if
+            partArea.className = "row"
+            partArea.innerHTML = `
+            <button type="button" class="btn btn-primary btn-lg">Add Part</button>
+            <input class="form-control-lg" type="text" placeholder="Search for parts">
             `
 
             alertContent.appendChild(logInAlert)
