@@ -12,9 +12,8 @@
     <title>Barnyard Web</title>
 </head>
 <body onload="checkLogin()">
-    <div id = "header" class = "float_left"><h1>Barnyard Web</h1> <div id = "LoggedIn" style="display:none">Logged in. <a href="#" onclick="signOut();">Sign out?</a></div></div>
+    <div id = "header" class = "float_left"><h1>Barnyard Web</h1> <div class="g-signin2 hide_after_login" data-onsuccess="onSignIn" id = "gLogin"></div> <div id = "LoggedIn" style="display:none">Logged in. <a href="#" onclick="signOut();">Sign out?</a></div></div>
     <br />
-    <div class="g-signin2 hide_after_login" data-onsuccess="onSignIn" id = "gLogin" align = "center"></div>
     <div class = "center" id = "login_prompt"> To login into Barnyard please sign in with a registered account. </div>
 
     <div id = "grid"  = "hide_until_login" style="display:none">
