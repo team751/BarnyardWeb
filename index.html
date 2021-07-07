@@ -12,7 +12,10 @@
     <title>Barnyard Web</title>
 </head>
 <body onload="checkLogin()">
-    <div id = "header" class = "float_left"><h1>Barnyard Web</h1> <div class="g-signin2 hide_after_login" data-onsuccess="onSignIn" id = "gLogin"></div> <div id = "LoggedIn" style="display:none">Logged in. <a href="#" onclick="signOut();">Sign out?</a></div></div>
+    <div id = "header"><h1>Barnyard Web</h1>
+      <div class="g-signin2 hide_after_login" data-onsuccess="onSignIn" id = "gLogin"></div>
+      <div id = "LoggedIn" style="display:none">Logged in. <a href="#" onclick="signOut();">Sign out?</a></div>
+    </div>
     <br />
     <div class = "center" id = "login_prompt"> To login into Barnyard please sign in with a registered account. </div>
 
@@ -21,8 +24,9 @@
     </div>
 
     <!--
-    <input type="button"onclick="onSignIn()"value="ShowMe">
+      <input type="button"onclick="onSignIn()"value="ShowMe">
     -->
+    <input type="button"onclick="onSignIn()"value="ShowMe">
 
     <script>
       function onSignIn(googleUser){
