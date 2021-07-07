@@ -1,5 +1,5 @@
 #header {margin: 0px; background-color: rgb(220,220,220);}
-#gLogin {width: 50px; margin: calc((100% - 50px)/2);}
+#gLogin {width: 50px; margin-left: calc((100% - 50px)/2);}
 
 .center{text-align: center;}
 
