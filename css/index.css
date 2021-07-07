@@ -1,5 +1,6 @@
 #header {margin: 0px; background-color: rgb(220,220,220);}
-#gLogin {width: 50px;;}
+#gLogin {width: 50px;}
+#grid {grid-column: auto auto auto; grid-row: auto auto auto;}
 
 .center{text-align: center;}
 
