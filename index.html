@@ -12,7 +12,7 @@
     <title>Barnyard Web</title>
 </head>
 <body onload="checkLogin()">
-    <div id = "header" class = "float_left"><h1>Barnyard Web</h1> Logged in. <a href="#" onclick="signOut();">Sign out?</a></div>
+    <div id = "header" class = "float_left"><h1>Barnyard Web</h1> <div id = "LoggedIn" style="display:none">Logged in. <a href="#" onclick="signOut();">Sign out?</a></div></div>
     <div class="g-signin2 hide_after_login" data-onsuccess="onSignIn" id = "gLogin"></div>
     <div class = "center" id = "login_prompt"> To login into Barnyard please sign in with a registered account. </div>
 
@@ -29,6 +29,7 @@
         document.getElementById('grid').style.display='block';
         document.getElementById('gLogin').style.display='none';
         document.getElementById('login_prompt').style.display='none';
+        document.getElementById('LoggedIn').style.display='block';
       }
       function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
@@ -38,6 +39,7 @@
         document.getElementById('grid').style.display='none';
         document.getElementById('gLogin').style.display='block';
         document.getElementById('login_prompt').style.display='block';
+        document.getElementById('LoggedIn').style.display='none';
       }
     </script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
