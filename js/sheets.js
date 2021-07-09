@@ -26,8 +26,10 @@
        }).then((response) => {
         var result = response.result;
         console.log("Values retrieved."");
-      });
         console.log(result.values[0])
+        
+      });
+
      }
 
 
