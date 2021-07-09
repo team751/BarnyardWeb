@@ -12,21 +12,20 @@
      //Sheet id
      var ID = "1zRSYqFLEEHLTDiMwv_tjmZ2aUK3V4LZ9E4OVBDFX_OI";
 
-     var authorizeButton = document.getElementById('authorize_button');
-     var signoutButton = document.getElementById('signout_button');
-
      function handleClientLoad() {
        gapi.load('client:auth2', initClient);
      }
 
-     function read(){
+     function read(id){
+       id = id + 2;
+       console.log("Part\ Info!A"+id+":A"+id);
        gapi.client.sheets.spreadsheets.values.get({
          spreadsheetId:"1zRSYqFLEEHLTDiMwv_tjmZ2aUK3V4LZ9E4OVBDFX_OI",
-         range: "Part\ Info!A3:A3",
+         range: "Part\ Info!A"+id+":A"+id,
        }).then((response) => {
         console.log("Values retrieved.");
         console.log(response.result.values[0])
-
+        document.write("UID: " + response.result.values[0]);
       });
 
      }
