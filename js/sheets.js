@@ -16,8 +16,8 @@
        gapi.load('client:auth2', initClient);
      }
 
-     function read(id){
-       id = id + 2;
+     function read(num){
+       id = num + 2;
        console.log("Part\ Info!A"+id+":A"+id);
        gapi.client.sheets.spreadsheets.values.get({
          spreadsheetId:"1zRSYqFLEEHLTDiMwv_tjmZ2aUK3V4LZ9E4OVBDFX_OI",
