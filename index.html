@@ -16,7 +16,6 @@
     </div>
     <br />
     <div class = "center hide_after_login" id = "login_prompt"> To login into Barnyard please sign in with a registered account. </div>
-
     <div id = "wrong_email" style="display:none">Your email needs to be registered with an allowed gsuite.</div>
     <div id = "grid" style="display:none">
         Show this after login
@@ -31,5 +30,11 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="js/index.js"></script>
     <script src="BarnyardWeb/js/index.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+     onload="this.onload=function(){};handleClientLoad()"
+     onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+    <script src = "js/sheets.js"></script>
+    <script src = "Barnyard/js/sheets.js"></script>
 </body>
 </html>
