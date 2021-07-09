@@ -17,11 +17,12 @@
      }
 
      function read(num){
-       id = parseInt(num) + 2;
-       console.log("Part\ Info!A"+id+":A"+id);
+       var id = parseInt(num) + 2;
+       var location = "Part\ Info!A"+id+":A"+id;
+       console.log(location);
        gapi.client.sheets.spreadsheets.values.get({
          spreadsheetId:"1zRSYqFLEEHLTDiMwv_tjmZ2aUK3V4LZ9E4OVBDFX_OI",
-         range: "Part\ Info!A"+id+":A"+id,
+         range: location,
        }).then((response) => {
         console.log("Values retrieved.");
         console.log(response.result.values[0])
