@@ -24,10 +24,9 @@
          spreadsheetId:"1zRSYqFLEEHLTDiMwv_tjmZ2aUK3V4LZ9E4OVBDFX_OI",
          range: "Part\ Info!A3:A3",
        }).then((response) => {
-        var result = response.result;
-        console.log("Values retrieved."");
-        console.log(result.values[0])
-        
+        console.log("Values retrieved.");
+        console.log(response.result.values[0])
+
       });
 
      }
