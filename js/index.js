@@ -18,7 +18,7 @@ function onSignIn(googleUser){
 
   }else{
     document.getElementById("wrong_email").style.display = "block";
-    document.getElementById("LoggedIn").style.display = "block";
+    document.getElementById("logged_in").style.display = "block";
     document.getElementById("login_prompt").style.display = "none";
   }
 
