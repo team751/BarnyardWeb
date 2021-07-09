@@ -14,12 +14,13 @@
 <body onload="checkLogin()">
     <div id = "header"><h1>Barnyard Web</h1>
       <div class="g-signin2 hide_after_login" data-onsuccess="onSignIn" id = "gLogin"></div>
-      <div id = "LoggedIn" style="display:none">Logged in. <a href="#" onclick="signOut();">Sign out?</a></div>
+      <div id = "LoggedIn" class = "hide_until_login" style="display:none">Logged in. <a href="#" onclick="signOut();">Sign out?</a></div>
     </div>
     <br />
-    <div class = "center" id = "login_prompt"> To login into Barnyard please sign in with a registered account. </div>
+    <div class = "center hide_after_login" id = "login_prompt"> To login into Barnyard please sign in with a registered account. </div>
 
-    <div id = "grid"  = "hide_until_login" style="display:none">
+    <div id = "wrong_email" style="display:none">Your email needs to be registered with an allowed gsuite.</div>
+    <div id = "grid" style="display:none">
         Show this after login
     </div>
 
@@ -28,27 +29,11 @@
     -->
     <input type="button"onclick="onSignIn()"value="ShowMe">
 
-    <script>
-      function onSignIn(googleUser){
-        document.getElementById('grid').style.display='grid';
-        document.getElementById('gLogin').style.display='none';
-        document.getElementById('login_prompt').style.display='none';
-        document.getElementById('LoggedIn').style.display='block';
-      }
-      function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-          console.log('User signed out.');
-        });
-        document.getElementById('grid').style.display='none';
-        document.getElementById('gLogin').style.display='block';
-        document.getElementById('login_prompt').style.display='block';
-        document.getElementById('LoggedIn').style.display='none';
-      }
-    </script>
+
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="barnyard/index.js"></script>
+    <script src="js/index.js"></script>
+    <script src="BarnyardWeb/js/index.js"></script>
 </body>
 </html>
