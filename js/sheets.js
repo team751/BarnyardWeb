@@ -19,9 +19,9 @@
        gapi.load('client:auth2', initClient);
      }
 
-     function read(range = "Part Info!A3:A3"){
+     function read(){
        gapi.client.sheets.spreadsheets.values.get({
-         spreadsheetId: ID,
+         spreadsheetId:"1zRSYqFLEEHLTDiMwv_tjmZ2aUK3V4LZ9E4OVBDFX_OI",
          range: "Part Info!A3:A3",
        }).then((response) => {
         var result = response.result;
