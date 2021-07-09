@@ -21,7 +21,7 @@
 
      function read(range = "Part Info!A3:A3"){
        gapi.client.sheets.spreadsheets.values.get({
-         spreadsheetId: spreadsheetId,
+         spreadsheetId: ID,
          range: "Part Info!A3:A3",
        }).then((response) => {
         var result = response.result;
