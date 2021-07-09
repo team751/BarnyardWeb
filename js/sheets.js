@@ -22,7 +22,7 @@
      function read(){
        gapi.client.sheets.spreadsheets.values.get({
          spreadsheetId:"1zRSYqFLEEHLTDiMwv_tjmZ2aUK3V4LZ9E4OVBDFX_OI",
-         range: "Part Info!A3:A3",
+         range: "Part\ Info!A3:A3",
        }).then((response) => {
         var result = response.result;
         console.log("Values retrieved."");
